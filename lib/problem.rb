@@ -1,7 +1,3 @@
-class Problem
-
-end
-
 class GetMultiples
     def list
         [@multiple]
