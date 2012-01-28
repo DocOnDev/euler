@@ -29,7 +29,7 @@ describe GetMultiples do
     end
     context "multiple multiples" do
         it "returns 33 for multiples of 3 and 5 under 11" do
-            multiples.of(3).of(5).under(11).sum.should == 33
+            multiples.of(3).and(5).under(11).sum.should == 33
         end
     end
 end

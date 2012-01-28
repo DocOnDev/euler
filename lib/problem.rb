@@ -16,6 +16,9 @@ class GetMultiples
         @multiples << multiple
         self
     end
+    def and multiple
+        of multiple
+    end
     private
     def build_list
         multiple_list = []
