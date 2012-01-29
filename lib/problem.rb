@@ -1,8 +1,14 @@
 class FibonacciSequence
+    attr_accessor :sequence
+    def initialize
+        @sequence = [1,1,2]
+    end
     def term index
-        sequence = [1,1,2]
         return index if index < 3
-        (3..index).each { |idx| sequence[idx] = sequence[idx-1] + sequence[idx-2] } if index >= 3
-            sequence[index]
+        (3..index).each { |idx| sequence[idx] = calculate_it(idx) } if index >= 3
+        sequence[index]
+    end
+    def calculate_it(index)
+        sequence[index-1] + sequence[index-2]
     end
 end
