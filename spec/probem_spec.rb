@@ -51,5 +51,8 @@ describe FibonacciSequence do
         it "is 44 for sum of evens under 40" do
             sequence.under(40).evens.sum.should == 44
         end
+        it "is ?? for sum of evens under 4000000" do
+            sequence.under(4000000).evens.sum.should == 4613732
+        end
     end
 end
