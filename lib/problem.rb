@@ -1,7 +1,7 @@
 class FibonacciSequence
     attr_accessor :sequence
     def initialize
-        @sequence = [1,1]
+        @sequence = []
     end
     def term index
         return sequence[index] if sequence[index]
