@@ -38,4 +38,12 @@ describe FibonacciSequence do
             sequence.under(10).evens.should == [0,2,8]
         end
     end
+    context "sum" do
+        it "is 2 for sum of under 2" do
+            sequence.under(2).sum.should == 2
+        end
+        it "is 12 for sum of under 7" do
+            sequence.under(7).sum.should == 12
+        end
+    end
 end

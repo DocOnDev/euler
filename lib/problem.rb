@@ -2,6 +2,9 @@ class Array
     def evens
         self.delete_if { |value| value % 2 != 0 }
     end
+    def sum
+        self.inject(:+)
+    end
 end
 class FibonacciSequence
     attr_accessor :sequence
