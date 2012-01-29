@@ -26,5 +26,16 @@ describe FibonacciSequence do
         it "is [0,1,1,2,3,5] for under 7" do
             sequence.under(7).should == [0,1,1,2,3,5]
         end
+        it "is [0,1,1,2,3,5,8,13,21,34] for under 40" do
+            sequence.under(40).should == [0,1,1,2,3,5,8,13,21,34]
+        end
+    end
+    context "evens" do
+        it "is [0] for evens under 2" do
+            sequence.under(2).evens.should == [0]
+        end
+        it "is [0,2,8] for evens under 10" do
+            sequence.under(10).evens.should == [0,2,8]
+        end
     end
 end
