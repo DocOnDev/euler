@@ -3,12 +3,20 @@ class FibonacciSequence
     def initialize
         @sequence = []
     end
-    def term index
+    def [](index)
         return sequence[index] if sequence[index]
         return sequence[index] = calculate_it(index) if index >= 2
-        index
+        sequence[index] = index
     end
     def calculate_it(index)
-        term(index-1) + term(index-2)
+        self[index-1] + self[index-2]
+    end
+    def under(max)
+        term = 0
+        while self[term] < max do
+            term += 1
+        end
+        sequence.pop
+        sequence
     end
 end
