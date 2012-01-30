@@ -34,4 +34,9 @@ describe PrimeFactors do
             factors.generate(13195).should == [5,7,13,29]
         end
     end
+    context "largest" do
+        it "is 5 for a product of 30" do
+            factors.generate(30).largest.should == 5
+        end
+    end
 end
