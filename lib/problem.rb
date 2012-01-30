@@ -1,4 +1,4 @@
-class Array
+class FactorList < Array
     def largest
         self[-1]
     end
@@ -6,7 +6,7 @@ end
 class PrimeFactors
     attr_accessor :primes
     def initialize
-        @primes = []
+        @primes = FactorList.new
     end
     def generate product
         factor = 2
