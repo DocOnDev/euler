@@ -1,14 +1,13 @@
 class PrimeFactors
     def generate product
         primes = []
-        if product > 1
-            while product % 2 == 0
-                primes << 2
-                product /= 2
+        factor = 2
+        while product > 1
+            while product % factor == 0
+                primes << factor
+                product /= factor
             end
-            if product > 1
-                primes << product
-            end
+            factor += 1
         end
         primes
     end

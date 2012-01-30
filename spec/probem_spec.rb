@@ -21,5 +21,14 @@ describe PrimeFactors do
         it "is [2,2,2] for a product of 8" do
             factors.generate(8).should == [2,2,2]
         end
+        it "is [2,3] for a product of 6" do
+            factors.generate(6).should == [2,3]
+        end
+        it "is [3,3] for a product of 9" do
+            factors.generate(9).should == [3,3]
+        end
+        it "should be [2,3,5] for a product of 30" do
+            factors.generate(30).should == [2,3,5]
+        end
     end
 end
