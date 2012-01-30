@@ -41,5 +41,8 @@ describe PrimeFactors do
         it "is 29 for a product of 13195" do
             factors.generate(13195).largest.should == 29
         end
+        it "is 6857 for 600851475143" do
+            factors.generate(600851475143).largest.should == 6857
+        end
     end
 end
