@@ -8,6 +8,7 @@ class PrimeFactors
                 product /= factor
             end
             factor += 1
+            factor += 1 if factor > 3
         end
         primes
     end

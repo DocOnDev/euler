@@ -30,5 +30,8 @@ describe PrimeFactors do
         it "should be [2,3,5] for a product of 30" do
             factors.generate(30).should == [2,3,5]
         end
+        it "should be [5,7,13,29] for a product of 13195" do
+            factors.generate(13195).should == [5,7,13,29]
+        end
     end
 end
