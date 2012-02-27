@@ -30,4 +30,16 @@ describe PalindromeDetector do
             (0..9).each { |digit| detector.is_palindrome?(digit*11).should == true }
         end
     end
+
+    context 'triple digits' do
+        it 'considers 121 to be a palindrome' do
+            detector.is_palindrome?(121).should == true
+        end
+    end
+
+    context 'quadruple digits' do
+        it 'considers 1341 to not be a palindrome' do
+            detector.is_palindrome?(1341).should == false
+        end
+    end
 end
