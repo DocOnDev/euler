@@ -17,5 +17,9 @@ describe PalindromeDetector do
         it 'considers 12 to not be a palindrome' do
             detector.is_palindrome?(12).should == false
         end
+
+        it 'considers 13 to not be a palindrome' do
+            detector.is_palindrome?(13).should == false
+        end
     end
 end
