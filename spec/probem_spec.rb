@@ -5,7 +5,7 @@ describe PalindromeDetector do
 
     context 'single digit' do
         it 'considers any single digit to be a palindrome' do
-            (0..9).each { |digit| detector.is_palindrome?(1).should == true }
+            (0..9).each { |digit| detector.is_palindrome?(digit).should == true }
         end
     end
 
@@ -24,6 +24,10 @@ describe PalindromeDetector do
 
         it 'considers 22 to not be a palindrome' do
             detector.is_palindrome?(22).should == true
+        end
+
+        it 'considers any repeated double-digit a palindrome' do
+            (0..9).each { |digit| detector.is_palindrome?(digit*11).should == true }
         end
     end
 end
