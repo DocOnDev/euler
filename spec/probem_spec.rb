@@ -45,5 +45,9 @@ describe PalindromeDetector do
         it 'considers 2972 to not be a palindrome' do
             detector.is_palindrome?(2972).should == false
         end
+
+        it 'considers 2992 to be a palindrome' do
+            detector.is_palindrome?(2992).should == true
+        end
     end
 end
