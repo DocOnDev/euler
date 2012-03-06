@@ -1,19 +1,31 @@
 class SmallestProduct
     def calc(*args)
+        list = ProductList.new(args)
+        return list.largest_value if list.is_multiples?
+        return list.multiple_of_all
+    end
+
+end
+
+class ProductList
+    attr_reader :list
+
+    def initialize(args)
+        @list = args
+    end
+
+    def largest_value
+        list.max
+    end
+
+    def is_multiples?
+        list.each{ |item| return false if list.max % item > 0 }
+        true
+    end
+
+    def multiple_of_all
         result = 1
-        return largest_value(args) if are_multiples?(args)
-        args.each { |arg| result = result * arg }
+        list.each { |item| result = result * item }
         result
-    end
-
-    def are_multiples?(args)
-        args.sort
-        biggest = args[-1]
-        args.each{ |arg| return false if biggest % arg > 0 }
-        return true
-    end
-
-    def largest_value(args)
-        return args.max
     end
 end

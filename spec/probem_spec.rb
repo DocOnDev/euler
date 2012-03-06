@@ -14,6 +14,10 @@ describe SmallestProduct do
         it "is 2 for 2 and 2" do
             small_prod.calc(2,2).should == 2
         end
+
+        it "is 6 for 2 and 3" do
+            small_prod.calc(2,3).should == 6
+        end
     end
 
     context "three integers" do
@@ -22,7 +26,7 @@ describe SmallestProduct do
         end
 
         it "is 6 for 2, 3, and 6" do
-            small_prod.calc(2,3,6).should == 6
+            small_prod.calc(6,2,3).should == 6
         end
     end
 end
