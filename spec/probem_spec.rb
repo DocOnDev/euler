@@ -50,4 +50,22 @@ describe PalindromeDetector do
             detector.is_palindrome?(2992).should == true
         end
     end
+    it "finds the largest" do
+        outer = inner = 999
+        found = false
+        while inner > 900 do
+            outer.downto(outer-20) { |out| inner.downto(inner-100) do |_in| 
+                if detector.is_palindrome?(out * _in)
+                    puts out
+                    puts _in
+                    puts (out * _in)  
+                    found = true
+                end
+            end
+            }
+            outer -= 1
+            inner -= 1
+        end
+    end
 end
+
