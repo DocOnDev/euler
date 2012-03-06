@@ -1,5 +1,7 @@
 class SmallestProduct
-    def calc(a,b)
-        a*b
+    def calc(*args)
+        result = 1
+        args.each { |arg| result = result * arg }
+        result
     end
 end
