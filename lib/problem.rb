@@ -11,7 +11,7 @@ class ProductList
     attr_reader :list
 
     def initialize(args)
-        @list = args
+        @list = args.uniq
     end
 
     def largest_value
@@ -19,7 +19,7 @@ class ProductList
     end
 
     def smallest_product
-        find_smallest_product_for largest_product
+        find_product_smaller_or_equal_to largest_product
     end
 
     def is_multiples?
@@ -27,13 +27,14 @@ class ProductList
     end
 
     private
-    def find_smallest_product_for(current_product)
+    def find_product_smaller_or_equal_to(current_product)
         candidate = current_product / get_divisor
-        return find_smallest_product_for candidate if is_product?(candidate)
+        return find_product_smaller_or_equal_to candidate if is_product?(candidate)
         current_product
     end
 
     def largest_product
+        # Look at tap, map, etc.
         result = 1
         list.each { |item| result = result * item }
         result
