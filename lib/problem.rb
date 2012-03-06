@@ -2,7 +2,7 @@ class SmallestProduct
     def calc(*args)
         list = ProductList.new(args)
         return list.largest_value if list.is_multiples?
-        return list.multiple_of_all
+        return list.largest_product
     end
 
 end
@@ -23,7 +23,7 @@ class ProductList
         true
     end
 
-    def multiple_of_all
+    def largest_product
         result = 1
         list.each { |item| result = result * item }
         result
