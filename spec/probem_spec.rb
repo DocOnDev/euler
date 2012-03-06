@@ -20,13 +20,29 @@ describe SmallestProduct do
         end
     end
 
-    context "three integers" do
+    context "n integers" do
         it "is 1 for 1, 1, and 1" do
             small_prod.calc(1,1,1).should == 1
         end
 
         it "is 6 for 2, 3, and 6" do
             small_prod.calc(6,2,3).should == 6
+        end
+
+        it "is 42 for 3, 7, and 6" do
+            small_prod.calc(3,7,6).should == 42
+        end
+
+        it "is 42 for 1, 3, 7, and 6" do
+            small_prod.calc(1,3,7,6).should == 42
+        end
+
+        it "is 60 for 1, 2, 3, 4, and 5" do
+            small_prod.calc(1,2,3,4,5).should == 60
+        end
+
+        it "is ??? for 1 through 20" do
+            small_prod.calc(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20).should == 148492554210000
         end
     end
 end
