@@ -21,17 +21,8 @@ describe SmallestProduct do
             small_prod.calc(1,1,1).should == 1
         end
 
-#        it "is 6 for 2, 3, and 6" do
-#            small_prod.calc(2,3,6).should == 6
-#        end
-    end
-end
-
-describe AllProducts do
-    context "two integers" do
-        it "is 1 for 1 and 1" do
-            all_prod = AllProducts.new
-            all_prod.calc(1,1).should == 1
+        it "is 6 for 2, 3, and 6" do
+            small_prod.calc(2,3,6).should == 6
         end
     end
 end

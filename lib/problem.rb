@@ -5,9 +5,3 @@ class SmallestProduct
         result
     end
 end
-
-class AllProducts
-    def calc(a,b)
-        1
-    end
-end
