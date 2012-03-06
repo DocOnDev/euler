@@ -1,5 +1,5 @@
 class SmallestProduct
     def calc(a,b)
-        b
+        a*b
     end
 end

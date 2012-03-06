@@ -9,4 +9,8 @@ describe SmallestProduct do
     it "is 2 for 1 and 2" do
         small_prod.calc(1,2).should == 2
     end
+
+    it "is 4 for 2 and 2" do
+        small_prod.calc(2,2).should == 4
+    end
 end
