@@ -26,3 +26,12 @@ describe SmallestProduct do
 #        end
     end
 end
+
+describe AllProducts do
+    context "two integers" do
+        it "is 1 for 1 and 1" do
+            all_prod = AllProducts.new
+            all_prod.calc(1,1).should == 1
+        end
+    end
+end
