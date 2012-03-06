@@ -11,8 +11,8 @@ describe SmallestProduct do
             small_prod.calc(1,2).should == 2
         end
 
-        it "is 4 for 2 and 2" do
-            small_prod.calc(2,2).should == 4
+        it "is 2 for 2 and 2" do
+            small_prod.calc(2,2).should == 2
         end
     end
 
