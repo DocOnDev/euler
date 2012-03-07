@@ -34,10 +34,7 @@ class ProductList
     end
 
     def largest_product
-        # Look at tap, map, etc.
-        result = 1
-        list.each { |item| result = result * item }
-        result
+        return list.inject(:*)
     end
 
     def get_divisor
