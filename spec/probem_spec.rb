@@ -29,12 +29,12 @@ describe SmallestProduct do
             small_prod.calc(1,2,3,4,5,7).should == 420
         end
 
-        it "is HUGE for 1 through 20" do
-            small_prod.calc(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20).should == 148492554210000
+        it "is 2520 for 1-10" do
+            small_prod.calc(1,2,3,4,5,6,7,8,9,10).should == 2520
         end
 
-        it "is not as HUGE for 11 through 20" do
-            small_prod.calc(11,12,13,14,15,16,17,18,19,20).should == 670442572800
+        it "is HUGE for 1-20" do
+            small_prod.calc(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20).should == 99
         end
     end
 
