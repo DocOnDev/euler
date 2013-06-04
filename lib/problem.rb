@@ -1,16 +1,34 @@
 class Triplet
+  attr_accessor :set
+
   def initialize(triplet)
     raise StandardError, "Set too large" if triplet.length > 3
     raise StandardError, "Set too small" if triplet.length < 3
     raise StandardError, "Set cannot contain duplicates" if triplet.uniq.length < 3
-    @triplet = triplet
+    @set = triplet.sort
   end
 
   def valid?
-    @triplet[0] * @triplet[0] + @triplet[1] * @triplet[1] == @triplet[2] * @triplet[2]
+    @set[0] * @set[0] + @set[1] * @set[1] == @set[2] * @set[2]
   end
 
   def product
-    @triplet.inject(:*)
+    @set.inject(:*)
+  end
+end
+
+class Hunter
+  def triplet_for(product)
+    (1..10).each do |m|
+      (m+1..10).each do |n|
+        a = n*n - m*m
+        b = 2 * m * n
+        c = n*n + m*m
+
+        triplet = Triplet.new([a,b,c])
+        return triplet.set if triplet.valid? and triplet.product == product
+      end
+    end
+    return nil
   end
 end

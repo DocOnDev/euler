@@ -28,3 +28,14 @@ describe 'triplet' do
     triplet.product.should == 3*4*5
   end
 end
+
+describe 'hunter' do
+  let(:hunter) {Hunter.new}
+  it 'should find the prime triplet' do
+    hunter.triplet_for(3*4*5).should == [3,4,5]
+  end
+
+  it 'should find a scaled triplet' do
+    hunter.triplet_for(6*8*10).should == [6,8,10]
+  end
+end
