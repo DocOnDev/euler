@@ -15,18 +15,22 @@ class Triplet
   def product
     @set.inject(:*)
   end
+
+  def sum
+    @set.inject(:+)
+  end
 end
 
 class Hunter
-  def triplet_for(product)
-    (1..10).each do |m|
-      (m+1..10).each do |n|
+  def triplet_for(sum)
+    (1..100).each do |m|
+      (m+1..100).each do |n|
         a = n*n - m*m
         b = 2 * m * n
         c = n*n + m*m
 
         triplet = Triplet.new([a,b,c])
-        return triplet.set if triplet.valid? and triplet.product == product
+        return triplet.set if triplet.valid? and triplet.sum == sum
       end
     end
     return nil
